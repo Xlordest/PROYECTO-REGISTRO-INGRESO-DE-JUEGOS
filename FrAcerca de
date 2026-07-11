@@ -1,0 +1,30 @@
+public class frmAcercaDe extends javax.swing.JPanel {
+
+    /**
+     * Creates new form frmAcercaDe
+     */
+    public frmAcercaDe() {
+        initComponents();
+        txtAcercaDe.setEditable(false);
+    txtAcercaDe.setText(
+            "================================\n"
+          + "        ACERCA DE\n"
+          + "================================\n\n"
+          + "SISTEMA DE FACTURACION DE JUEGOS\n\n"
+          + "Version: 1.0.0.0\n\n"
+          + "AUTORES:\n"
+          + "- CHUQUIMARCA MARCA JAVIER ALEJANDRO\n"
+          + "- CHAMBA MAZA ESTEBAN MARTIN\n"
+          + "- MANCHAY RAMIREZ MAYCKEL EDUARDO\n"
+          + "- LOPEZ VEGA ERICKA DAYANA\n"
+          + "- SANMARTIN CORONEL MARCO ANDRES\n\n"
+          + "Carrera:\n"
+          + "Tecnologias de la Informacion\n\n"
+          + "Universidad Tecnica de Machala\n\n"
+          + "Descripcion:\n"
+          + "Sistema realizado para el registro\n"
+          + "de clientes y generacion de facturas\n"
+          + "de juegos recreativos.\n\n"
+          + "Año: 2026\n"
+          + "================================");
+    }
