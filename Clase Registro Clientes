@@ -1,0 +1,13 @@
+public class RegistroCliente extends Cliente{
+private int edad;
+private String tiempoJugado;
+
+    public RegistroCliente(int edad, String tiempoJugado, String Nombre, String Apellido, String Cedula, String Direccion, String Telefono) {
+        super(Nombre, Apellido, Cedula, Direccion, Telefono);
+        this.edad = edad;
+        this.tiempoJugado = tiempoJugado;
+    }
+public boolean validarRegistro(){
+    return super.validarCliente() && edad>=10 && edad<=100;
+}
+}
