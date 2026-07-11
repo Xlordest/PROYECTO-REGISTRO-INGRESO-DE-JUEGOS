@@ -1,0 +1,48 @@
+//Clase Facturas
+public class Factura {
+
+    private double tiempoJuego;
+    private String TiempoJugado;
+    private double precioPorTiempo;
+    private int cantNinos;
+
+    public Factura(double tiempoJuego, String TiempoJugado, double precioPorTiempo, int cantNinos) {
+        this.tiempoJuego = tiempoJuego;
+        this.TiempoJugado = TiempoJugado;
+        this.precioPorTiempo = precioPorTiempo;
+        this.cantNinos = cantNinos;
+    }
+
+
+    public double calcularSubTotal() {
+        return tiempoJuego * precioPorTiempo*cantNinos;
+    }
+
+    public double calcularDescuento() {
+        if (cantNinos >= 5) {
+            return calcularSubTotal() * 0.17;
+        } else {
+            return 0;
+        }
+    }
+
+    public String calcularTiempoADD() {
+        if (tiempoJuego >= 3) {
+            return "30 minutos extra";
+        } else {
+            return "sin tiempo adicional";
+        }
+    }
+
+    public double calcularIVA() {
+        return calcularSubTotal() *0.15;
+    }
+
+    public double calcularTotal() {
+        return calcularSubTotal() + calcularIVA()- calcularDescuento() ;
+    }
+
+    public boolean validarFactura() {
+        return tiempoJuego >= 1 && precioPorTiempo >= 1;
+    }
+}
